@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Lato|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield');
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	/*font-size: 0;*/
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Top bar*/
+.wrapper {
+	width: 96%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+body {
+	color: #7e7e7e;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header .top_bar {
+	background: #141518;
+	color: #fff;
+}
+
+header .top_bar .wrapper {
+	height: 58px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social_profiles {
+	font-size: 14px;
+}
+
+.social_profiles a {
+	margin-right: 20px;
+}
+
+.search form input.search_form {
+	border: 0;
+	background: transparent;
+	font-size: 13px;
+	color: #989797;
+	font-style: italic;
+	font-family: 'Open Sans', sans-serif;
+	width: 130px;
+}
+
+.button {
+	background: transparent;
+	color: #fff;
+	border: 0;
+}
+
+/* Logo */
+
+.logo {
+	min-height: 211px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo h1 {
+	display: none;
+}
+
+/* Navigation */
+nav {
+	height: 63px;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7; 
+}
+
+nav ul.menu {
+	text-align: center;	
+	font-size: 0;
+}
+
+nav ul.menu li {
+	display: inline-block;
+	font-size: 13px;
+	margin-left: 22px;
+	margin-right : 22px;
+}
+
+/* ссылка Сокирка ПО ЦЕНТРУ + БЛОК увесь, а не тики текст шоб не цилиться*/
+nav ul.menu li a {
+	color: #141417;
+	text-transform: uppercase;
+	font-family: 'Cabin', sans-serif;
+	text-decoration: none;
+	padding-left: 22px;
+	padding-right : 22px;
+	display: block;
+	min-height: 63px;
+	line-height: 63px;
+}
+
+/* Slider */
+section.slider {
+	overflow: hidden;
+}
+
+section.slider .homepage_slider {
+	/*display: flex;
+	justify-content: space-between;*/
+	cursor: pointer;
+	margin-right: -20px;
+}
+
+section.slider .homepage_slider .item-slide {
+	/*width: calc(33.3333% - 13px);*/
+	margin-right: 20px;
+	position: relative;
+
+}
+
+
+section.slider .homepage_slider .item-slide .mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(49, 49, 49, .7);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; /* шоб не в одну строку булы, а на разных*/
+}
+
+section.slider .homepage_slider .item-slide .mask .category {
+	font-size: 12px;
+	line-height: 12px;
+	text-transform: uppercase;
+	font-family: 'Cabin', sans-serif;
+	letter-spacing: 0.01em;
+	margin-bottom: 24px;
+
+}
+
+section.slider .homepage_slider .item-slide .mask .category::before {
+	content: "-";
+	margin-right: 15px;
+}
+section.slider .homepage_slider .item-slide .mask .category::after {
+	content: "-";
+	margin-left: 15px;
+}
+
+section.slider .homepage_slider .item-slide .mask h2.title {
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+	margin-bottom: 40px;
+	line-height: 30px ;
+}
+
+section.slider .homepage_slider .item-slide .mask a.more {
+	font-family: 'Mrs Saint Delafield', cursive;
+	font-size: 34px;
+
+}
+
+section.slider .homepage_slider .item-slide img {
+	max-width :100%;
+	height: auto;
+	display: block;
+}
+
+/* Основной блок + бок */
+main .wrapper {
+	margin-top: 85px;
+	display: flex;
+	justify-content: space-between;
+}
+
+section.content {
+	width: 67.52%;
+	margin-bottom: 90px;
+}
+
+aside {
+	width: 27.35%;
+}
+
+main .wrapper section.content article {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+main .wrapper section.content article img {
+	margin-right: 30px;
+}
+
+main .wrapper section.content article .post_data {
+	padding-top: 20px;
+}
+
+main .wrapper section.content article .post_data .category {
+	color: #b08672;
+	font-size: 12px;
+	line-height: 12px;
+	text-transform: uppercase;
+	font-family: 'Cabin', sans-serif;
+	letter-spacing: 0.01em;
+	margin-bottom: 20px;
+	display: block;
+}
+
+main .wrapper section.content article .post_data h2 {
+	font-size: 26px;
+	line-height: 26px;
+	font-family: 'Lato', sans-serif;
+	color: #262626;
+	margin-bottom: 30px;
+}
+
+main .wrapper section.content article .post_data p {
+	margin-bottom: 30px;
+}
+
+main .wrapper section.content article .post_data a {
+	font-family: 'Mrs Saint Delafield', cursive;
+	font-size: 30px;
+}
+
+/* Trending box */
+.trending {
+	padding-bottom: 10px; /* паддинг - бо маржини друг друга сьедают (соседи обще делают)*/
+}
+
+.trending .trending_list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.trending .trending_list article {
+	width: calc(33.3333% - 10px); /* отступы по 15 2шт = 30 / 3элеметна = по 10 каждому от ширины*/
+	position: relative; /* для маски шоб позиционировать */
+}
+
+.trending .trending_list article .mask { display: none; }
+
+.trending .trending_list article.active .mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(20, 21, 24, .5);
+	display: flex; /*контент в центр*/
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+}
+
+.trending .trending_list article .mask .category {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #a5a5a5;
+	font-family: 'Cabin', sans-serif;
+	letter-spacing: 0.01em;
+}
+
+
+.trending .trending_list article .mask .category::before {
+	content: "-";
+	margin-right: 15px;
+}
+.trending .trending_list article .mask .category::after {
+	content: "-";
+	margin-left: 15px;
+}
+
+
+.trending .trending_list article .mask h4 {
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+.trending .trending_list article img {
+	max-width: 100%; /* шоб не вылазили за родителя при мин сжатии*/
+	height: auto;
+}
+
+.trending_heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.trending_heading .line {
+	flex-grow: 1;
+	height: 1px;
+	background: #e7e7e7;
+}
+
+.trending_heading .trending_title {
+	text-transform: uppercase;
+	padding-left: 24px;
+	padding-right: 24px;
+	color: #262626;
+	font-size: 16px;
+	font-family: 'Cabin', sans-serif;
+	line-height: 16px;
+	letter-spacing: 0.15em;
+}
+
+/* Pagination */
+.pagination {	
+	font-size: 0;
+	list-style-type: none;
+}
+
+.pagination li {
+	display: inline-block;
+	font-size: 12px;
+	color: #7e7e7e;
+	font-family: 'Cabin', sans-serif;
+	border: 1px solid #7e7e7e;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	margin-right: 8px;
+}
+
+.pagination li.active {
+	background: #b08672;
+	border-color: #b08672;
+	color: #fff;
+}
+
+.pagination li a {
+	text-decoration: none;
+	display: block;
+}
+
+/* Aside*/
+.sidebar .widget {
+	margin-bottom: 55px;
+}
+
+.sidebar .widget.widget_about {
+	text-align: center;
+}
+
+.sidebar .widget.widget_about .image_holder {
+	margin-bottom: 40px;	
+}
+
+.sidebar .widget.widget_about .image_holder img {
+	border-radius: 50%;
+}
+
+.sidebar .widget.widget_about p {
+	margin-bottom: 25px;	
+}
+
+.sidebar .widget.widget_about .social_profiles a {
+	color: #262626;
+}
+
+.sidebar .widget.widget_adds figure {
+	position: relative;
+}
+
+.sidebar .widget.widget_adds figure figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.sidebar .widget.widget_adds figure figcaption .category {
+	background: rgba(20, 21, 24, .2);
+	height: 33px;
+	padding-right: 30px;
+	padding-left: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-family: 'Cabin', sans-serif;
+	font-size: 12px;
+	line-height: 33px;
+	letter-spacing: 0.1em;
+	display: inline-block; /* шоб не на всю ширину родителя розтянувся - а тики по тексту*/
+	margin-top: 33px;
+}
+
+.widget_popular_posts .widget_title {
+	font-family: 'Cabin', sans-serif;
+	text-transform: uppercase;	
+	font-size: 13px;
+	letter-spacing: 0.15em;
+	color: #262626;
+}
+
+
+.widget_popular_posts .line_title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.widget_popular_posts .line_title h3.widget_title {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.widget_popular_posts .line_title .line {
+	flex-grow: 1;
+	height: 1px;
+	background: #e7e7e7;
+}
+
+.list_posts .post {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.list_posts .post .img_holder {
+	position: relative;
+}
+
+.list_posts .post .img_holder .number {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	color: #262626;
+	font-size: 10px;
+	font-family: 'Cabin', sans-serif;
+	text-align: center;
+	line-height: 15px;
+}
+
+.list_posts .post .post_data {
+	padding-top: 11px;
+	padding-left: 19px;
+}
+
+.list_posts .post .post_data h4 {
+	color: #262626;
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 14px;
+	font-family: 'Lato', sans-serif;
+}
+
+.list_posts .post .post_data span.date {
+	text-transform: uppercase;
+	color: #a5a5a5;
+	font-size: 11px;
+	line-height: 11px;
+	display: block;
+	letter-spacing: 0.1em;
+	font-family: 'Cabin', sans-serif;
+}
+
+/* widget - advertizing */
+.widget_advertizing {
+	/*width: 300px;
+	height: 280px;*/
+	
+	margin: 55px auto;
+	position: relative;
+}
+.widget_advertizing img {
+	max-width: 100%; /* шоб не вылазили за родителя при мин сжатии*/
+	height: auto;
+}
+
+.widget_advertizing .mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, .6);
+	display: flex; /*контент в центр*/
+	justify-content: center;
+	align-items: center;
+	/*flex-direction: column;
+	color: #fff;*/
+}
+
+
+.widget_advertizing .mask {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner_box {
+	text-align: center;
+	line-height: 228px;
+	width: 268px;
+	height: 228px;
+	border: 1px solid white;
+}
+.widget_advertizing .mask span {
+	font-family: 'Cabin', sans-serif;
+	color: #b08672;
+	padding: 12px;
+	letter-spacing: 0.1em;
+}
+
+
+/* widget - inst */
+.widget_instagram .line_title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.widget_instagram .line_title h3.widget_title {
+	padding-left: 24px;
+	padding-right: 24px;
+	font-family: 'Cabin', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: #262626;
+}
+
+.widget_instagram .line_title .line {
+	flex-grow: 1;
+	height: 1px;
+	background: #e7e7e7;
+}
+
+.widget_instagram .img_holder {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;	
+}
+
+.widget_instagram .img_holder img {
+	margin-bottom: 10px;
+}
+
+.widget_instagram a {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.widget_instagram a span {
+	text-transform: uppercase;
+	font-family: 'Cabin', sans-serif;
+	color: #b08672;
+	font-size: 11px;
+	letter-spacing: 0.1em;
+	margin-left: 10px;
+}
+
+.widget_instagram a i.fab {
+	font-size: 11px;
+	color: #b08672;
+}
+/* widget - tweets */
+.widget_my_tweets .line_title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.widget_my_tweets .line_title h3.widget_title {
+	padding-left: 24px;
+	padding-right: 24px;
+	font-family: 'Cabin', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: #262626;
+}
+
+.widget_my_tweets .line_title .line {
+	flex-grow: 1;
+	height: 1px;
+	background: #e7e7e7;
+}
+
+.widget_my_tweets a {
+	display: block;
+	text-align: center;
+}
+
+.widget_my_tweets a i.fab {
+	font-size: 28px;
+	line-height: 28px;
+	color: #b08672;
+}
+
+.widget_my_tweets p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	color: #262626;
+	text-align: center;
+	margin-top: 40px;
+}
+.widget_my_tweets p a {
+	display: inline;
+}
+
+.widget_my_tweets p span {
+	color: #b08672;
+}
+
+.widget_my_tweets p.post_time {
+	font-family: 'Cabin', sans-serif;
+    text-transform: uppercase;
+    color: #aaa;
+    font-size: 11px;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+    margin-top: 25px;
+}
+
+
+/* Footer */
+footer .insta_feed {
+	display: flex;
+	font-size: 0;
+}
+
+
+footer .insta_feed .item {
+	width: 12.5%;	
+}
+
+footer .insta_feed .item img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+footer ._social {
+	background: #141518;
+}
+
+footer ._social .wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;	
+}
+
+footer ._social .wrapper .item_social {
+	padding-right: 40px;
+	padding-left: 40px;
+	text-align: center;
+	color: #989c9b;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: 'Cabin', sans-serif;
+	letter-spacing: 0.15em;
+	text-decoration: none;
+}
+
+footer ._social .wrapper .item_social i.fab,
+footer ._social .wrapper .item_social i.fas
+{
+	margin-bottom: 20px;
+	color: #fff;
+}
+
